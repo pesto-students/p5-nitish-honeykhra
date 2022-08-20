@@ -109,62 +109,6 @@ From figures 3 and 4 you can see that although WebKit and Gecko use slightly dif
 
 Gecko calls the tree of visually formatted elements a "Frame tree". Each element is a frame. WebKit uses the term "Render Tree" and it consists of "Render Objects". WebKit uses the term "layout" for the placing of elements, while Gecko calls it "Reflow". "Attachment" is WebKit's term for connecting DOM nodes and visual information to create the render tree. A minor non-semantic difference is that Gecko has an extra layer between the HTML and the DOM tree. It is called the "content sink" and is a factory for making DOM elements. We will talk about each part of the flow:
 
-# Parsing - general 
-
-Parsing a document means translating it to a structure the code can use. The result of parsing is usually a tree of nodes that represent the structure of the document. This is called a parse tree or a syntax tree.
-
-For example, parsing the expression 2 + 3 - 1 could return this tree:
-
-## Mathematical expression tree node.
-Figure : mathematical expression tree node
-
-
-# Grammars 
-
-Parsing is based on the syntax rules the document obeys: the language or format it was written in. Every format you can parse must have deterministic grammar consisting of vocabulary and syntax rules. It is called a context free grammar. Human languages are not such languages and therefore cannot be parsed with conventional parsing techniques.
-
-## Parser - Lexer combination 
-Parsing can be separated into two sub processes: lexical analysis and syntax analysis.
-
-Lexical analysis is the process of breaking the input into tokens. Tokens are the language vocabulary: the collection of valid building blocks. In human language it will consist of all the words that appear in the dictionary for that language.
-
-Syntax analysis is the applying of the language syntax rules.
-
-Parsers usually divide the work between two components: the lexer (sometimes called tokenizer) that is responsible for breaking the input into valid tokens, and the parser that is responsible for constructing the parse tree by analyzing the document structure according to the language syntax rules.
-
-The lexer knows how to strip irrelevant characters like white spaces and line breaks.
-
-## From source document to parse trees
-Figure : from source document to parse trees
-
-The parsing process is iterative. The parser will usually ask the lexer for a new token and try to match the token with one of the syntax rules. If a rule is matched, a node corresponding to the token will be added to the parse tree and the parser will ask for another token.
-
-If no rule matches, the parser will store the token internally, and keep asking for tokens until a rule matching all the internally stored tokens is found. If no rule is found then the parser will raise an exception. This means the document was not valid and contained syntax errors.
-
-## Translation 
-In many cases the parse tree is not the final product. Parsing is often used in translation: transforming the input document to another format. An example is compilation. The compiler that compiles source code into machine code first parses it into a parse tree and then translates the tree into a machine code document.
-
-## Compilation flow
-Figure : compilation flow
-
-Parsing example #
-In figure 5 we built a parse tree from a mathematical expression. Let's try to define a simple mathematical language and see the parse process.
-
-Key Term
-
-Our language can include integers, plus signs and minus signs.
-Syntax:
-
-The language syntax building blocks are expressions, terms and operations.
-Our language can include any number of expressions.
-An expression is defined as a "term" followed by an "operation" followed by another term
-An operation is a plus token or a minus token
-A term is an integer token or an expression
-Let's analyze the input 2 + 3 - 1.
-
-The first substring that matches a rule is 2: according to rule #5 it is a term. The second match is 2 + 3: this matches the third rule: a term followed by an operation followed by another term. The next match will only be hit at the end of the input. 2 + 3 - 1 is an expression because we already know that 2 + 3is a term, so we have a term followed by an operation followed by another term. 2 + + will not match any 
-rule and therefore is an invalid input.
-
 # The order of processing scripts and style sheets
 
 ## scripts
