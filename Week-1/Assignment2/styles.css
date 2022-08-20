@@ -6,6 +6,24 @@
   padding: 0;
 }
 
+navbar {
+  position: absolute;
+  z-index: 10;
+  background-color: #f0f0f0;
+  color: #000;
+  width: 2.5rem;
+  height: 100vh;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+nav {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
 .top-background {
   position: absolute;
   left: 0px;
@@ -31,17 +49,4 @@
   height: 5rem;
   width: 5rem;
   color: #fff;
-}
-
-navbar {
-  position: absolute;
-  z-index: 10;
-  background-color: #f0f0f0;
-  color: #000;
-  width: 2.5rem;
-  height: 100vh;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
