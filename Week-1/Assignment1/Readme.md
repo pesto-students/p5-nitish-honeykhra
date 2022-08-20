@@ -162,4 +162,5 @@ An operation is a plus token or a minus token
 A term is an integer token or an expression
 Let's analyze the input 2 + 3 - 1.
 
-The first substring that matches a rule is 2: according to rule #5 it is a term. The second match is 2 + 3: this matches the third rule: a term followed by an operation followed by another term. The next match will only be hit at the end of the input. 2 + 3 - 1 is an expression because we already know that 2 + 3is a term, so we have a term followed by an operation followed by another term. 2 + + will not match any rule and therefore is an invalid input.
+The first substring that matches a rule is 2: according to rule #5 it is a term. The second match is 2 + 3: this matches the third rule: a term followed by an operation followed by another term. The next match will only be hit at the end of the input. 2 + 3 - 1 is an expression because we already know that 2 + 3is a term, so we have a term followed by an operation followed by another term. 2 + + will not match any 
+rule and therefore is an invalid input.
