@@ -11,7 +11,8 @@
   top: 0;
   width: 100%;
   z-index: -1;
-  object-fit: stretch;
+  object-fit: cover;
+ 
 }
 
 .main {
@@ -19,23 +20,25 @@
   top: 0;
   background-color: rgba(255, 253, 253, 0.7);
 }
-#heading {
+#heading h1 {
+  z-index: 1;
   margin-top: 3rem;
   font-size: 3rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-items: center;
   align-items: center;
   font-family: "Pacifico", cursive;
   height: 10rem;
 }
-#heading:after {
+#heading h1::after {
+  z-index: 0;
   content: "";
-  display: block;
-  position: absolute;
-  left: 100px;
-  bottom: -10px;
-  width: 25px;
-  height: 400px;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 6px;
   background: #ea1d6f;
 }
 
