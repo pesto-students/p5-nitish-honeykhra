@@ -107,6 +107,7 @@ input {
 .container {
   flex: 0 1 700px;
   margin: auto;
+  margin-top: 5rem;
   padding: 10px;
 }
 
@@ -267,7 +268,7 @@ input {
   background: none;
   border: none;
   color: #ea1d6f;
-  font-size:1.2rem;
+  font-size: 1.2rem;
   cursor: pointer;
   outline: none;
   margin: 2rem 0rem 0 1rem;
