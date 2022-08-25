@@ -310,7 +310,7 @@ select option {
   color: #fff;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 850px) {
   .main {
     width: 100%;
   }
@@ -376,22 +376,14 @@ select option {
   }
 }
 
-@media screen and (max-width: 850px) {
-  .screen-body {
-    padding: 40px;
-  }
-
-  .screen-body-item {
-    padding: 0;
-  }
-
-  #back {
-    height: 100%;
-  }
-}
-
 @media screen and (max-width: 400px) {
   .main {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #back {
+    height: 100%;
   }
 }
