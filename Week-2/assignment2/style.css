@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgba(75, 8, 73, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  /* transition: all 2s; */
+}
+.box {
+  width: 100px;
+  height: 100px;
+}
+.box1 {
+  background-color: #606c38;
+}
+.box1:hover {
+  transition: all 2s;
+  transform: rotate(-80deg);
+}
+.box2 {
+  background-color: #dda15e;
+}
+.box3 {
+  background-color: #bc6c25;
+  position: relative;
+  top: 100px;
+  left: -200px;
+}
+.box4 {
+  background-color: #283618;
+  position: relative;
+  top: 100px;
+  left: -200px;
+}
