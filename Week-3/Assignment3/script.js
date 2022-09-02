@@ -33,7 +33,7 @@ function createIncrement() {
   let count = 0;
   function increment() {
     count++;
-    // console.log(count);
+    // console.log(`Count is ${count}`);
   }
 
   let message = `Count is ${count}`;
