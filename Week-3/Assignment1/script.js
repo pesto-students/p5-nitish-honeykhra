@@ -37,6 +37,7 @@ function memoize(fn) {
     // ? get all arguments
     const key = args.toString();
     console.log("Fn called with " + key);
+
     // console.log(cache);
     if (cache.has(key)) {
       {
@@ -60,7 +61,9 @@ function memoize(fn) {
 
 // * Add refactor for n number of inputs in ES6
 function add(...args) {
+  // console.log(...args);
   return args.reduce(function (aac, cur) {
+    // aac stands for accumulator and cur stands for current value
     return aac + cur;
   });
 }
