@@ -8,9 +8,10 @@ We are printing the count variable with the help of message variable that gets t
 
 Now we are incrementing the count but message already has a value of count equal to 0
 
-If we uncomment console.log inside the function increment
+- If we uncomment ** console.log ** inside the function increment \*
 
 ## The output is -
+
 Count is 1
 Count is 2
 Count is 3
