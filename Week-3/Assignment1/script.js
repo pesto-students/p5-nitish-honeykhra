@@ -53,16 +53,25 @@ function memoize(fn) {
     return y;
   };
 }
+// * Simple add function
+// function add(a, b) {
+//   return a + b;
+// }
 
-function add(a, b) {
-  return a + b;
+// * Add refactor for n number of inputs in ES6
+function add(...args) {
+  return args.reduce(function (aac, cur) {
+    return aac + cur;
+  });
 }
 
 const memoizeAdd = memoize(add);
 
 memoizeAdd(100, 100);
 memoizeAdd(100, 100);
-memoizeAdd(100, 100);
+memoizeAdd(100, 100, 200, 400);
+memoizeAdd(100);
+memoizeAdd(100);
 memoizeAdd(10, 35);
 memoizeAdd(1, 35);
 memoizeAdd(10, 5);
