@@ -33,6 +33,7 @@
 
 function memoize(fn) {
   const cache = new Map();
+  // Object having key value pairs
   return function (...args) {
     // ? get all arguments
     const key = args.toString();

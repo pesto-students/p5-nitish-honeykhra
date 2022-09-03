@@ -34,9 +34,9 @@ function createIncrement() {
   function increment() {
     count++;
     // console.log(`Count is ${count}`);
+   
   }
-
-  let message = `Count is ${count}`;
+ let message = `Count is ${count}`;
   function log() {
     console.log(message);
   }

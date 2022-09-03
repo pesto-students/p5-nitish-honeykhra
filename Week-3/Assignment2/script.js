@@ -55,7 +55,7 @@ var monkeys = {
   sleepDuration: "8 and 12 hours",
 };
 
-console.log("Call");
+console.log("Call output");
 greet.call(cats); // cats typically sleep between 12 and 16 hours
 greet.call(dogs); // dogs typically sleep between 2 and 5 hours
 greet.call(monkeys);
@@ -75,5 +75,20 @@ var obj = {
   },
 };
 
-console.log("Bind");
+console.log("Bind output");
 obj.loop();
+
+// ? Apply in Javascript
+
+const numbers = [5, 6, 2, 3, 7];
+
+const max = Math.max.apply(null, numbers);
+
+console.log("Apply output");
+console.log(max);
+// expected output: 7
+
+const min = Math.min.apply(null, numbers);
+
+console.log(min);
+// expected output: 2
