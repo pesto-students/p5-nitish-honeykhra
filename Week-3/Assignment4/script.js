@@ -30,28 +30,41 @@
 // ! Code starts here
 
 function createStack() {
-  return;
-  {
-    items: [],
-      function push(item) {
-        this.items.push(item);
-      },
-      function pop() {
-        return this.items.pop();
-      };
-  }
-}
-const stack = createStack();
-stack.push(10);
-stack.push(5);
-stack.pop(); // => 5
-stack.items; // => [10]
-stack.items = [10, 100, 1000]; // Encapsulation broken!
-function createStack() {
   // Write your code here...
+  let items = [];
+
+  return {
+    push: (element) => {
+      items.push(element);
+      console.log("Added to stack " + element);
+    },
+    pop: () => {
+      console.log("Removed from stack " + items.pop());
+      return;
+    },
+    peek: () => {
+      console.log("Top of stack is");
+      console.log(items[items.length - 1]);
+      return;
+    },
+    isEmpty: () => {
+      console.log("Is stack empty");
+      return console.log(items.length === 0);
+    },
+    size: () => {
+      return console.log("Size of stack: " + items.length);
+    },
+  };
 }
-// const stack = createStack();
-stack.push(10);
-stack.push(5);
-stack.pop(); // => 5
-stack.items; // => undefined
+
+const stack = createStack();
+stack.push(10); //10
+stack.push(5); // 5
+stack.push(25); // 5
+stack.push(50); // 5
+stack.pop();
+stack.peek();
+stack.isEmpty();
+stack.size();
+
+console.log("Stack.items " + stack.items); // undefined
