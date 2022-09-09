@@ -49,10 +49,16 @@ class Teacher extends Person {
   }
 }
 
+Teacher.prototype.tution = function (subject) {
+  let tutionSubject = subject;
+  log(`${this.name} is now teaching ${tutionSubject} at home`);
+};
+
 const him = new Teacher();
 him.initialize("Adam", 45);
 log(him);
 him.teach("inheritance");
+him.tution("ReactJs");
 
 // ? ES6 method
 // class Person {
