@@ -28,3 +28,11 @@
 })(document.getElementById("logger"));
 
 // ! Code starts here
+
+const fib = {
+  [Symbol.iterator]: function () {
+    return {
+      next: () => {},
+    };
+  },
+};
