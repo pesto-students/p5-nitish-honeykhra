@@ -43,9 +43,9 @@ class Teacher extends Person {
     super(name, age); // call the super class constructor and pass in the name parameter
   }
   teach(sub) {
-    let subject;
-    subject = sub;
-    log(`${this.name} is now teaching ${subject}`);
+    // let subject;
+    // subject = sub;
+    log(`${this.name} is now teaching ${sub}`);
   }
 }
 
