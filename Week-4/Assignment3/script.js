@@ -29,10 +29,31 @@
 
 // ! Code starts here
 
-const fib = {
-  [Symbol.iterator]: function () {
+const Fib = (n) => ({
+  [Symbol.iterator]: () => {
+    let i = 1;
+    let old = 0,
+      new1 = 0;
     return {
-      next: () => {},
+      next: () => {
+        // value: "something",
+        // done: false,
+        // console.log(i, old, new1);
+        if (i++ <= n) {
+          [old, new1] = [new1, old + new1 || 1];
+          return { value: old, done: false };
+        } else {
+          return { done: true };
+        }
+      },
     };
   },
-};
+});
+
+// Print method 1
+// console.log([...Fib(6)]);
+//? Print method 2
+console.log("The Fibonacci Series is ");
+for (let num of Fib(9)) {
+  console.log(num);
+}
