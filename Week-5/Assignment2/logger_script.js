@@ -30,9 +30,9 @@
   };
 })(document.getElementById("logger"));
 
-// Testing
-console.log("Testing");
-console.log("Hi!", { a: 3, b: 6 }, 42, true);
-console.log("Multiple", "arguments", "here");
-console.log(null, undefined);
-console.old("Eyy, that's the old and boring one.");
+// // Testing
+// console.log("Testing");
+// console.log("Hi!", { a: 3, b: 6 }, 42, true);
+// console.log("Multiple", "arguments", "here");
+// console.log(null, undefined);
+// console.old("Eyy, that's the old and boring one.");
