@@ -1,0 +1,14 @@
+{
+  "name": "assignment4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mathOperations.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "honey",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.0.3"
+  }
+}
