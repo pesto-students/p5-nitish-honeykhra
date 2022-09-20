@@ -1,22 +1,15 @@
 const mathOperations = require("./calculator");
 
-// describe("Calculator tests", () => {
-//   test("adding 1 + 2 should return 3", () => {
-//     expect(mathOperations.sum(1, 2)).toBe(3);
-//   });
-// });
+// ? Jest tests follow BDD style tests, with each test suite having
+// ? one main describe block and can have multiple test blocks
 
-// describe("Calculator tests", () => {
-//   test("adding 1 + 2 should return 10", () => {
-//     // arrange and act
-//     var result = mathOperations.sum(1, 2);
+// Example to understand
 
-//     // assert
-//     expect(result).toBe(10);
-//   });
-// });
-
+// The describe block is an outer description for the test suite
+// i.e it represents a generic container for all the tests
 describe("Calculator tests", () => {
+  // Next, we have an individual test block – this represents
+  //  a single test.The string in quotes represents the name of the test.
   test("adding 1 + 2 should return 3", () => {
     // arrange and act
     var result = mathOperations.sum(1, 2);
