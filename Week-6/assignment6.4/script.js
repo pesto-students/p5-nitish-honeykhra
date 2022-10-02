@@ -18,3 +18,6 @@ console.log(buySellStock(price));
 
 let price1 = [10, 15, 16, 13, 6, 14, 19];
 console.log(buySellStock(price1));
+
+// ? Time complexity is O(n)
+// ? Space complexity is O(1)

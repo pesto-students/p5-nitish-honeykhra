@@ -45,3 +45,6 @@ function generateSpiralMatrix(n) {
 console.log(generateSpiralMatrix(3));
 console.log(generateSpiralMatrix(4));
 // console.log(generateSpiralMatrix(5));
+
+// ? Time complexity is O(n square);
+// ? Space complexity is O(1);
