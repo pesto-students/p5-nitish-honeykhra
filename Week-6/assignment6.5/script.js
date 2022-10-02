@@ -1,11 +1,8 @@
 function pairWithDifference(array, difference) {
   console.log("Difference: " + difference);
   let arrSet = new Set(array);
-
   // console.log(arrSet.has(2 + difference));
-
   for (let i = 0; i < array.length; i++) {
-    // console.log(array[i]);
     if (arrSet.has(array[i] + difference)) return true;
   }
   return false;
