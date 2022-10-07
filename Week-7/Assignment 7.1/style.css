@@ -1,27 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 
 body {
-  background: #333;
+  background: #252a34;
   font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Fira Code", monospace;
+  /* font-family: "Satisfy", monospace; */
 }
 .log-boolean,
 .log-undefined {
-  color: magenta;
-  font-family: "Fira Code", monospace;
+  color: #ff2e63;
+  font-family: "Satisfy", monospace;
 }
-.log-object,
+
 .log-string {
-  color: orange;
-  font-family: "Fira Code", monospace;
+  color: #dfd3c3;
+}
+.log-object {
+  color: #ffabe1;
 }
 .log-number {
-  color: cyan;
-  font-family: "Fira Code", monospace;
+  color: #08d9d6;
 }
 
 h1 {
-  color: orangered;
+  color: #ff2e63;
 }

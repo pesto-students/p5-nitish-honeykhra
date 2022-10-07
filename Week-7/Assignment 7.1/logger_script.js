@@ -1,5 +1,5 @@
 //! This file is just for showing console.log on screen
-//! This file is not needed at for any functionality
+//! This file is not needed at all for any functionality
 
 (function (logger) {
   console.old = console.log;
@@ -30,9 +30,3 @@
   };
 })(document.getElementById("logger"));
 
-// Testing
-console.log("Testing");
-console.log("Hi!", { a: 3, b: 6 }, 42, true);
-console.log("Multiple", "arguments", "here");
-console.log(null, undefined);
-console.old("Eyy, that's the old and boring one.");
