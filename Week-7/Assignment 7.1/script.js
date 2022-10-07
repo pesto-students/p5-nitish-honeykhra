@@ -234,9 +234,10 @@ ll.add(20);
 ll.add(30);
 ll.add(40);
 ll.add(50);
-ll.printList();
-ll.reverseList();
-// ll.reverseRecursion();
 
 console.log("Is Link list Empty : ");
 console.log(ll.isEmpty());
+
+ll.printList();
+ll.reverseList();
+// ll.reverseRecursion();
