@@ -112,3 +112,7 @@ var ll3 = new LinkedList();
 [1, 2, 3, 4, 5, 6, 7, 8].map((el) => ll3.add(el));
 ll3.printList();
 ll3.rotateList(4);
+
+// Time Complexity of Rotate Link List is O(n)
+// Space Complexity of Rotate Link List is O(1)
+// As we are not using any extra space

@@ -222,3 +222,8 @@ console.log(ll.isEmpty());
 
 ll.printList();
 ll.reverseList();
+
+// Time Complexity of Reverse Link List is O(n)
+// As we are running 1 while loop
+// Space Complexity of Reverse Link List is O(1)
+// As we are not using any extra space

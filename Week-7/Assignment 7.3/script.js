@@ -92,4 +92,7 @@ ll.head.next.next.next.next = ll.head;
 console.log("Added a loop");
 ll.detectLoop();
 
-// detectLoop();
+// Time Complexity of Detect Loop Function is O(n)
+// As we are running 1 while loop
+// Space Complexity of Detect Loop Function is O(1)
+// As we are not using any extra space

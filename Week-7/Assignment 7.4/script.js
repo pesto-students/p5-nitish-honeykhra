@@ -23,3 +23,8 @@ console.log(parenthesisChecker(str2));
 
 const str3 = "([]";
 console.log(parenthesisChecker(str3));
+
+// Time Complexity of Parenthesis Checker is O(n)
+// As we are running 1 for loop
+// Space Complexity of Parenthesis Checker is O(1)
+// As we are not using any extra space
