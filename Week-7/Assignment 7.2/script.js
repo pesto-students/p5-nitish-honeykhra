@@ -83,6 +83,7 @@ class LinkedList {
 
     console.log(`Rotated Linked List by : ${k} places`);
     this.printList(this.head);
+    console.log("\n");
   }
 }
 
@@ -99,3 +100,15 @@ ll.add(50);
 
 ll.printList();
 ll.rotateList(2);
+
+// Case 1
+var ll2 = new LinkedList();
+[2, 4, 7, 8, 9].map((el) => ll2.add(el));
+ll2.printList();
+ll2.rotateList(3);
+
+// Case 2
+var ll3 = new LinkedList();
+[1, 2, 3, 4, 5, 6, 7, 8].map((el) => ll3.add(el));
+ll3.printList();
+ll3.rotateList(4);
