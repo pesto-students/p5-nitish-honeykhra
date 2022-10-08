@@ -1,12 +1,9 @@
-// Make an array of objects
-
-// for loop through string
-// if key and value match
-
 function parenthesisChecker(str) {
   brackets = { "(": ")", "{": "}", "[": "]" };
 
   const arr = [];
+
+  console.log("Provided brackets : " + str);
 
   for (const el of str) {
     if (brackets[el]) {
@@ -20,3 +17,9 @@ function parenthesisChecker(str) {
 
 const str = "{([])}";
 console.log(parenthesisChecker(str));
+
+const str2 = "()";
+console.log(parenthesisChecker(str2));
+
+const str3 = "([]";
+console.log(parenthesisChecker(str3));
