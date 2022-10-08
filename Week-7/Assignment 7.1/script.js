@@ -204,24 +204,6 @@ class LinkedList {
     console.log("Reversed link list");
     this.printList(prev);
   }
-
-  // Recursion method
-  // O(n) time & O(n) space
-  // reverseRecursion() {
-  //   let curr = this.head;
-  //   let preview = null;
-  //   if (!curr || !curr.next) {
-  //     return curr;
-  //   }
-  //   let tmp = reverseRecursion(curr.next);
-  //   curr.next.next = curr;
-  //   curr.next = undefined;
-  //   // console.log(tmp);
-  //   // return tmp;
-
-  //   console.log("Reversed link list");
-  //   // this.printList(tmp);
-  // }
 }
 
 // creating an object for the
@@ -240,4 +222,3 @@ console.log(ll.isEmpty());
 
 ll.printList();
 ll.reverseList();
-// ll.reverseRecursion();

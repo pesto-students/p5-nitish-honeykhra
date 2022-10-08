@@ -1,77 +1,101 @@
-// To rotate the linked list,
-// we need to change the next pointer of kth node to NULL,
-//  the next pointer of the last node should point to the previous head node,
-//  and finally, change the head to(k + 1)th node
-
-//  So we need to get hold of three nodes:
-//  kth node, (k + 1)th node, and last node.
-
-//  Traverse the list from the beginning and stop at kth node.
-//  store k’s next in a temp pointer and point k’s next to NULL
-//  then start traversing from temp and keep traversing
-//   till the end and point end node’s next to start node
-//   and make temp as the new head.
-
-var head;
-
 class Node {
-  constructor(val) {
-    this.data = val;
+  // constructor
+  constructor(element) {
+    this.element = element;
     this.next = null;
   }
 }
 
-// This function rotates a linked list counter-clockwise
-// and updates the head
-function rotate(k) {
-  if (k == 0) return;
-  console.log(`Rotated Linked List by : ${k} places`);
-  var current = head;
-  var count = 1;
-
-  // Traverse the linked list upto kth node
-  while (count < k && current != null) {
-    current = current.next;
-    count++;
+// linkedlist class
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.size = 0;
   }
 
-  // If current = NULL or k > n
-  // Don't change the list in this case
-  if (current == null) return;
-  // current points to kth node
-  var kthNode = current;
-  // current will point to last node after this loop
-  while (current.next != null) current = current.next;
-  // Change next of last node to previous head
-  current.next = head;
-  // Change head to (k+1)th node
-  head = kthNode.next;
-  // change next of kth node to null
-  kthNode.next = null;
-}
+  add(element) {
+    // creates a new node
+    var node = new Node(element);
 
-function push(new_data) {
-  var new_node = new Node(new_data);
-  new_node.next = head;
-  head = new_node;
-}
+    // to store current node
+    var current;
 
-function printList() {
-  var curr = head;
-  var str = "Head -> ";
-  while (curr) {
-    str += curr.data + "-> ";
-    curr = curr.next;
+    // if list is Empty add the
+    // element and make it head
+    if (this.head == null) this.head = node;
+    else {
+      current = this.head;
+
+      // iterate to the end of the
+      // list
+      while (current.next) {
+        current = current.next;
+      }
+
+      // add node
+      current.next = node;
+    }
+    this.size++;
   }
-  str += "null";
-  console.log(str);
+
+  isEmpty() {
+    return this.size == 0;
+  }
+
+  size_of_list() {
+    console.log(this.size);
+  }
+
+  printList(curr = this.head) {
+    // var curr = this.head;
+    var str = "Head -> ";
+    while (curr) {
+      str += curr.element + "-> ";
+      curr = curr.next;
+    }
+    str += "null";
+    console.log(str);
+  }
+
+  // This function rotates a linked list counter-clockwise and updates the head.
+  rotateList(k, current = this.head) {
+    if (k == 0) return;
+
+    var count = 1;
+    // Traverse the linked list upto kth node
+    while (count < k && current !== null) {
+      current = current.next;
+      count++;
+    }
+    // Don't change the list in this case
+    if (current === null) return;
+    // current points to kth node
+    var kthNode = current;
+    // current will point to last node after this loop
+    while (current.next !== null) current = current.next;
+
+    // Change next of last node to previous head
+    current.next = this.head;
+    // Change head to (k+1)th node
+    this.head = kthNode.next;
+    // change next of kth node to null
+    kthNode.next = null;
+
+    console.log(`Rotated Linked List by : ${k} places`);
+    this.printList(this.head);
+  }
 }
 
-// ? Use case
-// create a list 10->20->30->40->50->60
-for (i = 60; i >= 10; i -= 10) push(i);
+// creating an object for the
+// Linkedlist class
+var ll = new LinkedList();
 
-console.log("Given list");
-printList();
-rotate(4);
-printList();
+// adding more elements to the list
+ll.add(10);
+ll.add(20);
+ll.add(30);
+ll.add(40);
+ll.add(50);
+
+ll.printList();
+ll.rotateList(2);
