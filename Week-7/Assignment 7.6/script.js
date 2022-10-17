@@ -28,6 +28,12 @@ class Queue {
       console.log("Peek(1st item in queue) " + this.stack1.items[0]);
     }
   }
+  print() {
+    var str = "";
+    for (var i = 0; i < this.stack1.items.length; i++)
+      str += this.stack1.items[i] + "-";
+    console.log("Queue " + str + " End");
+  }
 }
 
 class Stack {
@@ -59,6 +65,7 @@ var queue = new Queue();
 queue.enqueue(1);
 queue.enqueue(2);
 queue.enqueue(3);
+queue.print();
 queue.peek();
 queue.dequeue();
 queue.peek();
@@ -68,3 +75,4 @@ queue.enqueue(5);
 queue.dequeue();
 queue.enqueue(6);
 queue.peek();
+queue.print();
