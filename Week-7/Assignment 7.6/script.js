@@ -1,7 +1,33 @@
 // Queue using two stacks
-function Queue() {
-  var s1 = new Stack();
-  var s2 = new Stack();
+class Queue {
+  constructor() {
+    this.stack1 = new Stack();
+    this.stack2 = new Stack();
+  }
+
+  // Queue Methods using two stacks
+  enqueue(value) {
+    this.stack1.push(value);
+    console.log("Enqueued " + value);
+  }
+
+  dequeue() {
+    while (this.stack1.items.length > 0) {
+      this.stack2.push(this.stack1.pop());
+    }
+    console.log("Dequeued " + this.stack2.pop());
+
+    // Put Queue back in order so we can proceed with more operations
+    while (this.stack2.items.length > 0) {
+      this.stack1.push(this.stack2.pop());
+    }
+  }
+
+  peek() {
+    if (this.stack1.items.length > 0) {
+      console.log("Peek(1st item in queue) " + this.stack1.items[0]);
+    }
+  }
 }
 
 class Stack {
@@ -29,14 +55,16 @@ class Stack {
   }
 }
 
-var stack = new Stack();
-console.log(stack.isEmpty());
-stack.push(10);
-stack.push(20);
-stack.push(30);
-stack.printStack();
-console.log(stack.peek());
-console.log(stack.pop());
-stack.printStack();
-
-Queue();
+var queue = new Queue();
+queue.enqueue(1);
+queue.enqueue(2);
+queue.enqueue(3);
+queue.peek();
+queue.dequeue();
+queue.peek();
+queue.enqueue(4);
+queue.dequeue();
+queue.enqueue(5);
+queue.dequeue();
+queue.enqueue(6);
+queue.peek();
