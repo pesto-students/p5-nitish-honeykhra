@@ -2,10 +2,8 @@
 
 ### Open Terminal and type `npx create-react-app`
 
-## Available Scripts
-
-In the project directory, you can run:
-
+### This will create a React app
+## Now we need to `cd ` into project directory using terminal and enter
 ### `npm start`
 
 Runs the app in the development mode.\
