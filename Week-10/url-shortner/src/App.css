@@ -1,6 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap");
+
 body {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ul li,
@@ -244,4 +249,92 @@ p {
 
 .footer ul {
   margin: 0;
+}
+
+/* Url Input */
+.urlInput {
+  padding: 0 4rem;
+  margin-top: 5rem;
+  width: 90vw;
+}
+.urlInput .img {
+  position: absolute;
+  margin: 0;
+  width: 90vw;
+  border-radius: 1rem;
+  background-color: #7b6ba7;
+  z-index: -1;
+}
+.urlInput .content {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+}
+.urlInput .content input {
+  width: 60%;
+  padding: 1rem 2rem;
+  margin: 0 1rem 0 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+.urlInput .content button {
+  padding: 0rem 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  color: #ece9e9;
+  background-color: #2bd0d0;
+  font-weight: 600;
+}
+
+/* GetShortUrl */
+.getshorturlcontainer {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  background-color: #917ec4;
+  color: #d9d5e4;
+}
+
+.getshorturl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #16131d;
+  padding: 2rem 2rem;
+  max-width: 90vw;
+}
+.getshorturl h2 {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.getshorturl button {
+  color: #fff;
+  background-color: #39324e;
+  font-size: 1rem;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.8rem 2rem;
+  font-weight: 500;
+  margin-left: 2rem;
+}
+
+.getshorturl .original-link {
+  flex: 3;
+}
+.getshorturl .right {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+/* Loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
 }

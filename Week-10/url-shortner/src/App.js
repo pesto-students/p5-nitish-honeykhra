@@ -1,6 +1,7 @@
 import "./App.css";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import UrlInput from "./components/UrlInput";
 import Statistics from "./components/Statistics";
 import Boost from "./components/Boost";
 import Footer from "./components/Footer";
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
+      <UrlInput />
       <Statistics />
       <Boost />
       <Footer />
