@@ -63,3 +63,46 @@ p {
   border-radius: 2rem;
   padding: 0.5rem 2rem;
 }
+
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-direction: row;
+  padding: 0 4rem;
+}
+
+.hero .left {
+  width: 50%;
+  align-self: flex-start;
+}
+.hero .left h1 {
+  padding: 3rem 0 0 0;
+  margin: 3rem 0 0 0;
+  letter-spacing: -0.1rem;
+  font-size: 5rem;
+  font-weight: 800;
+  color: #454545;
+}
+.hero .left p {
+  width: 75%;
+  font-size: 1.2rem;
+  color: #6b6a6a;
+  line-height: 1.8rem;
+}
+.hero .left button {
+  max-width: 50%;
+  border-radius: 5rem;
+  border: none;
+  color: white;
+  background-color: #2bd0d0;
+  font-size: 1.3rem;
+  padding: 0.8rem 3rem;
+  font-weight: 600;
+}
+.hero .right {
+  width: 50%;
+}
+.hero .right img {
+  height: 85vh;
+}
