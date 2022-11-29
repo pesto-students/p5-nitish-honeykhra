@@ -1,49 +1,56 @@
-#Week 11 - Assignment 
+# Exercise Week 11
 
-In this Assignment, you will need to deploy your URL shortener to a web serverDeploy a production build to web server of your choice. 
-You can choose any free deployment solution
-The web application should be accessible by a hostname. Example: Netlify
-All the workflows should work as expected.
+## Deploy a Url Shortener In Netlify
 
-Benchmarks:
-1.Before deployment, do performance benchmarking(checking reder cyclesand memory consumption).
-2.Try to reduce render cycles as much as possible with optimization
-techniques like using pure components
-3.Create a .ReadME file with all the commands for prod deployment
-4.The application should be running on a cloud webserver.
-5.Include the hostname of the deployed web application in the readMe file.
-6.Push the readMe to the github repo
+In this Assignment, I deploy your URL shortener to a web server
+Deploy a production build to Netlify web server
 
-ReduxExercise1:
+[Click Hear To Check Deployed Application ](https://dashing-madeleine-b50e5b.netlify.app/).
 
-Use the below Codesandbox link
-https://codesandbox.io/s/github/dceddia/plain-react-state-lightswitch
-It’s a plain React app displaying a “Room” with a lightswitch. 
-Clicking the button toggles the state, which turns the light on and off.
-The task is to add Redux to this app, and move the lightswitch state out of the Reactcomponent and into Redux.
-Once you’re done, clicking the button should dispatch an action, and the reducer should return the updated lightswitch state.
-You can leave everything in one file, or split out the Room component into its own file if you like.
-If you do leave it all in index.js, you won’t need to export the connected Roomcomponent. 
-Instead, save it in a separate variable, like 
-const ConnectedRoom =connect(mapStateToProps)(Room)– 
-and update theReactDOM.
-rendercall torender the ConnectedRoom.
+## Result Of Performance Benchmarking
 
-Guidelines:
-1.Add Redux into the application.
-2.Wire Redux with the React App using built in methods.
-3.The Action, Dispatchers and Reducer files should have been created.
-4.Bonus for creating separate files for each.
-5.The Action - Dispatch - Reducer - Store flow should work as expected.
+![This is an image](https://i.postimg.cc/RV6Xtb8c/Lighthouse-Report-Viewer.png)
 
-ReduxExercise2:
-Create a brand new React project with Create ReactApp orC odeSandbox
-Delete the boilerplate code from index.js and start fresh.
-Add Redux to the project as you’ve done before.
-There’s just one component here: the StepCounter.
-It should have 2 buttons, one“Add Step” and one “Reset Steps”, as shown above. Clicking “Add Step” shouldincrement the step counter by 1, and “Reset Steps” should clear it. 
-(think: how manyactions will you need?)
-For each action, create an action constant and an action creator. UsemapDispatchToProps to pass the actions in as props to the StepCountercomponent. 
-Try out the object form of mapDispatch as well as the function form.
-You can break the project up into files if you like, or keep it all in one file. If you wanta suggestion, try for an index.js with the createStore + reducer, a StepCounter.jswith the component and any necessary connect() setup, and an actions.js with theactions (don’t forget to export them!).
-If you want to make it pretty, go for it.Guidelines:1.Add Redux into the application.2.Wire Redux with the React App using built in methods.3.The Action, Dispatchers and Reducer files should have been created.4.Bonus for creating separate files for each.5.Bonus for adding styles to the application.6.The Action - Dispatch - Reducer - Store flow should work as expected.
+#
+
+## Redux Exercise 1
+
+![This is an image](https://i.postimg.cc/rsdCSKh8/q1.png)
+
+## Installation
+
+```
+go to redux-exercise-1 folder
+
+npm i
+
+npm run
+```
+
+## Output
+
+It’s a plain React app displaying a “Room” with a lightswitch. Clicking the button toggles the state, which turns the light on and off using redux.
+![This is an image](https://i.postimg.cc/0yGGdgCJ/a1.png)
+
+#
+
+## Redux Exercise 2
+
+![This is an image](https://i.postimg.cc/1zRQyqR7/Screenshot-2022-11-22-014234.png)
+
+![This is an image](https://i.postimg.cc/76VXw569/Screenshot-2022-11-22-014428.png)
+
+## Installation
+
+```
+go to redux-exercise-2 folder
+
+npm i
+
+npm run
+```
+
+## Output
+
+It’s a plain React app incrementing steps and rest the steps using redux.
+![This is an image](https://i.postimg.cc/zv4hrNnp/Screenshot-2022-11-22-014551.png)
