@@ -5,11 +5,11 @@
 In this Assignment, I deploy your URL shortener to a web server
 Deploy a production build to Netlify web server
 
-[Click Hear To Check Deployed Application ](https://dashing-madeleine-b50e5b.netlify.app/).
+[Click Hear To Check Deployed Application ](https://endearing-sprinkles-6bb77f.netlify.app/).
 
 ## Result Of Performance Benchmarking
 
-![This is an image](https://i.postimg.cc/RV6Xtb8c/Lighthouse-Report-Viewer.png)
+![This is an image](./screens/lighthouse.png)
 
 #
 
@@ -20,7 +20,7 @@ Deploy a production build to Netlify web server
 ## Installation
 
 ```
-go to redux-exercise-1 folder
+go to ReduxExercise-1-redux-state-lightswitch folder
 
 npm i
 
@@ -30,7 +30,8 @@ npm run
 ## Output
 
 It’s a plain React app displaying a “Room” with a lightswitch. Clicking the button toggles the state, which turns the light on and off using redux.
-![This is an image](https://i.postimg.cc/0yGGdgCJ/a1.png)
+![This is an image](./screens/light.png)
+![This is an image](./screens/dark.png)
 
 #
 
@@ -43,7 +44,7 @@ It’s a plain React app displaying a “Room” with a lightswitch. Clicking th
 ## Installation
 
 ```
-go to redux-exercise-2 folder
+go to ReduxExercise-2-steps-counter folder
 
 npm i
 
@@ -52,5 +53,9 @@ npm run
 
 ## Output
 
-It’s a plain React app incrementing steps and rest the steps using redux.
-![This is an image](https://i.postimg.cc/zv4hrNnp/Screenshot-2022-11-22-014551.png)
+It’s a plain React app incrementing steps and reset the steps using redux.
+
+### I have used Redux Toolkit here
+
+![This is an image](./screens/steps0.png)
+![This is an image](./screens/steps.png)
