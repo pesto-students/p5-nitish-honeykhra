@@ -1,6 +1,8 @@
-# Plain React Room with Lightswitch
+# Simple Redux State Room with Lightswitch
 
-This is a simple React app with one piece of state.
+This is a simple Redux-React app with one piece of state.
+
+Here we have moved the state from React to Redux
 
 ---
 
