@@ -1,0 +1,33 @@
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.row > button {
+  min-width: 35vw;
+  margin-top: 1.5rem;
+  background-color: #663797;
+  color: aliceblue;
+  padding: 1rem 4rem;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.row > .button1 {
+  color: rgb(29, 27, 27);
+  background-color: #e1d3f0;
+  font-size: 2rem;
+}
+
+.value {
+  font-size: 68px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 2px;
+  font-family: "Courier New", Courier, monospace;
+}
